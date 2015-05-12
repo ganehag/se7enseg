@@ -1,0 +1,104 @@
+/* LCD rules */
+
+@linewidth: 1em;
+
+@segment-on-color: #404040;
+@segment-off-color: #BCC1BC;
+
+
+.se7enseg {
+    border-width: 0;
+    border-spacing: 0.5em;
+    border-collapse: separate;
+    font-size: 9pt;
+
+    &.soft {
+        div.upper, div.lower {
+            border-radius: @linewidth * 0.35;
+        }
+    }
+
+    &.slant {
+        transform: skewX(-8deg);
+    }
+
+    color: @segment-on-color;
+
+    .segment {
+        display: inline-block;
+
+        .digit, .dot {
+            display: inline-block;
+            margin-right: @linewidth/1.5;
+        }
+
+        .dot {
+            width: @linewidth;
+
+            span {
+                display: block;
+                border-width: @linewidth/1.7;
+                border-style: solid;
+                border-color: @segment-off-color;
+            }
+
+            &.on {
+                span {
+                    border-color: inherit !important;
+                }
+            }
+        }
+    }
+
+    div.upper, div.lower {
+        border: @linewidth solid @segment-off-color;
+        height: @linewidth * 3;
+        margin: 0 auto;
+        width: @linewidth * 3;
+    }
+
+    div.upper {
+        border-bottom-width: @linewidth/2;
+    }
+    div.lower {
+        border-top-width: @linewidth/2;
+    }
+
+    tbody, tr, tr {
+        border-color: inherit;
+        border-size: 0;
+    }
+
+    /* Segment A */
+    .sA div.upper {
+        border-top-color: inherit !important;
+    }
+    /* Segment B */
+    .sB div.upper {
+        border-right-color: inherit !important;
+    }
+    /* Segment C */
+    .sC div.lower {
+        border-right-color: inherit !important;
+    }
+    /* Segment D */
+    .sD div.lower {
+        border-bottom-color: inherit !important;
+    }
+    /* Segment E */
+    .sE div.lower {
+        border-left-color: inherit !important;
+    }
+    /* Segment F */
+    .sF div.upper {
+        border-left-color: inherit !important;
+    }
+    /* Segment G */
+    .sG div.upper {
+        border-bottom-color: inherit !important;
+    }
+    /* Segment G */
+    .sG div.lower {
+        border-top-color: inherit !important;
+    }
+}
