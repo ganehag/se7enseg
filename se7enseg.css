@@ -1,0 +1,94 @@
+/* LCD rules */
+.se7enseg {
+  border-width: 0;
+  border-spacing: 0.5em;
+  border-collapse: separate;
+  font-size: 9pt;
+  color: #404040;
+  /* Segment A */
+
+  /* Segment B */
+
+  /* Segment C */
+
+  /* Segment D */
+
+  /* Segment E */
+
+  /* Segment F */
+
+  /* Segment G */
+
+  /* Segment G */
+
+}
+.se7enseg.soft div.upper,
+.se7enseg.soft div.lower {
+  border-radius: 0.35em;
+}
+.se7enseg.slant {
+  transform: skewX(-8deg);
+}
+.se7enseg .segment {
+  display: inline-block;
+}
+.se7enseg .segment .digit,
+.se7enseg .segment .dot {
+  display: inline-block;
+  margin-right: 0.6666666666666666em;
+}
+.se7enseg .segment .dot {
+  width: 1em;
+}
+.se7enseg .segment .dot span {
+  display: block;
+  border-width: 0.5882352941176471em;
+  border-style: solid;
+  border-color: #bcc1bc;
+}
+.se7enseg .segment .dot.on span {
+  border-color: inherit !important;
+}
+.se7enseg div.upper,
+.se7enseg div.lower {
+  border: 1em solid #bcc1bc;
+  height: 3em;
+  margin: 0 auto;
+  width: 3em;
+}
+.se7enseg div.upper {
+  border-bottom-width: 0.5em;
+}
+.se7enseg div.lower {
+  border-top-width: 0.5em;
+}
+.se7enseg tbody,
+.se7enseg tr,
+.se7enseg tr {
+  border-color: inherit;
+  border-size: 0;
+}
+.se7enseg .sA div.upper {
+  border-top-color: inherit !important;
+}
+.se7enseg .sB div.upper {
+  border-right-color: inherit !important;
+}
+.se7enseg .sC div.lower {
+  border-right-color: inherit !important;
+}
+.se7enseg .sD div.lower {
+  border-bottom-color: inherit !important;
+}
+.se7enseg .sE div.lower {
+  border-left-color: inherit !important;
+}
+.se7enseg .sF div.upper {
+  border-left-color: inherit !important;
+}
+.se7enseg .sG div.upper {
+  border-bottom-color: inherit !important;
+}
+.se7enseg .sG div.lower {
+  border-top-color: inherit !important;
+}
